@@ -126,3 +126,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 STATIC_URL = "/static/"
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://6988-2804-14c-87c1-d19a-35dc-149a-b07c-c9fd.ngrok-free.app',
+]
+ALLOWED_HOSTS = ['*']
+CORS_ORIGIN_WHITELIST = ['*']

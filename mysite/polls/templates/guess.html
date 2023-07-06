@@ -22,18 +22,19 @@
 
 <body>
     <div id="principal">
-        <h3>Advinhe quem é a mais linda de todos:</h3>
+        <h3>Advinhe quem é o mais lindo de todos:</h3>
         <form method="post">
             <label for="guess">Pode digitar, sem medo:</label>
             {% csrf_token %}
-            <input type="text" name="guess" id="guess" size="40"><br>
+            <input type="text" name="guess" id="guess" size="40" placeholder="A resposta agora é diferente..."><br>
             <input type="submit" value="envia essa porra">
         </form>
         {% if message %}
             <p>{{message}}</p>
-            <img src="{{image|safe}}">
+            {% if message == 'acerto, tu é muito foda' %}
+                <img src=" {% static '../static/polls/acerto.jpg' %}" alt="o caraio">
+            {% endif %}
         {% endif %}
-        <!-- <img src='{% static "../static/polls/acerto.jpg" %}'> -->
     </div>
 </body>
 
