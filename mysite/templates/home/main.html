@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #343A40;
+            color: #F8F9FA;
+        }
+
+        .container-md {
+            padding: 50px;
+            margin: 20px auto;
+            border: 5px solid #1A1D20;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        @media (max-width: 767.98px) {
+            .card-title{
+                font-size: medium;
+            }
+            .container-md {
+                padding: 25px 5px;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-md">
+        <div class="row">
+            <div class="col-12">
+                <h2>Seja bem vindo ao melhor projeto de Django de todos os tempos!</h2>
+                <h5>Feito por Lucas Garzuze Cordeiro</h5>
+            </div>
+        </div>
+
+        <div class="row justify-content-evenly" style="margin-top: 40px;">
+            <div class="col-6 d-flex justify-content-center">
+                <div class="card" style="width: 18rem; border: 3px solid #1A1D20; border-radius: 8px;">
+                    <img src="{% static 'guess/acerto.jpg' %}" class="card-img-top" alt="sabe muitp">
+                    <div class="card-body" style="background-color: #343A40; color: #F8F9FA;">
+                        <h5 class="card-title">Uma aplicação de advinhação!!</h5>
+                        <p class="card-text">(meu pau nasuamao)</p>
+                        <a href="/guess" class="btn btn-primary stretched-link">Vamo que vamo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 d-flex justify-content-center">
+                <div class="card" style="width: 18rem; border: 3px solid #1A1D20; border-radius: 8px;">
+                    <img src="{% static 'home/django_csev.jpg' %}" class="card-img-top"
+                        alt="django django balanca a raba pros manos">
+                    <div class="card-body" style="background-color: #343A40; color: #F8F9FA;">
+                        <h5 class="card-title">Uma aplicação de formularios!!</h5>
+                        <p class="card-text">(seu pai e mo otarios)</p>
+                        <a href="/forms" class="btn btn-primary stretched-link">Vamo que vamo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-evenly" style="margin-top: 40px;">
+            <div class="col-4 d-flex justify-content-center">
+                <img src="{% static 'home/snoopy_lendo.gif' %}" style="border-radius: 20px; border: 5px solid #1A1D20;">
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

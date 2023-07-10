@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -130,7 +131,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://6988-2804-14c-87c1-d19a-35dc-149a-b07c-c9fd.ngrok-free.app',
+    'https://841b-2804-14c-87c1-d19a-6d71-fd7d-6e0a-10c5.ngrok-free.app',
 ]
 ALLOWED_HOSTS = ['*']
 CORS_ORIGIN_WHITELIST = ['*']
