@@ -48,25 +48,37 @@
         </div>
 
         <div class="row justify-content-evenly" style="margin-top: 40px;">
-            <div class="col-6 d-flex justify-content-center">
+            <div class="col-md-auto d-flex justify-content-center">
                 <div class="card" style="width: 18rem; border: 3px solid #1A1D20; border-radius: 8px;">
                     <img src="{% static 'guess/acerto.jpg' %}" class="card-img-top" alt="sabe muitp">
                     <div class="card-body" style="background-color: #343A40; color: #F8F9FA;">
                         <h5 class="card-title">Uma aplicação de advinhação!!</h5>
-                        <p class="card-text">(meu pau nasuamao)</p>
+                        <p class="card-text">Tente adivinhar quem é o mais lindo de todos <br> (dessa vez não sou eu)</p>
                         <a href="/guess" class="btn btn-primary stretched-link">Vamo que vamo</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-6 d-flex justify-content-center">
+            <div class="col-md-auto d-flex justify-content-center">
                 <div class="card" style="width: 18rem; border: 3px solid #1A1D20; border-radius: 8px;">
-                    <img src="{% static 'home/django_csev.jpg' %}" class="card-img-top"
+                    <img src="{% static 'home/sepais.png' %}" class="card-img-top"
                         alt="django django balanca a raba pros manos">
                     <div class="card-body" style="background-color: #343A40; color: #F8F9FA;">
                         <h5 class="card-title">Uma aplicação de formularios!!</h5>
-                        <p class="card-text">(seu pai e mo otarios)</p>
+                        <p class="card-text">Faz o seu cadastro aí</p>
                         <a href="/forms" class="btn btn-primary stretched-link">Vamo que vamo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-auto d-flex justify-content-center">
+                <div class="card" style="width: 18rem; border: 3px solid #1A1D20; border-radius: 8px;">
+                    <img src="{% static 'home/django_csev.jpg' %}" class="card-img-top"
+                        alt="django django balanca a raba pros manos" style="width: 100%;">
+                    <div class="card-body" style="background-color: #343A40; color: #F8F9FA;">
+                        <h5 class="card-title">Uma aplicação de votação!!</h5>
+                        <p class="card-text">Vote em respostas para perguntas complexas e expresse a sua opnião</p>
+                        <a href="/polls" class="btn btn-primary stretched-link">Vamo que vamo</a>
                     </div>
                 </div>
             </div>

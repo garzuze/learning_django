@@ -28,6 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://279f-2804-14c-87c1-d19a-6d71-fd7d-6e0a-10c5.ngrok-free.app',
+]
 
 # Application definition
 
@@ -130,8 +133,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://841b-2804-14c-87c1-d19a-6d71-fd7d-6e0a-10c5.ngrok-free.app',
-]
-ALLOWED_HOSTS = ['*']
-CORS_ORIGIN_WHITELIST = ['*']
