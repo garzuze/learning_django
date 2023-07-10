@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index meu parceiro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0 auto;
+            margin: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #337ab7;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>O site de votação mais foda de todos.</h1>
+    <h2>Perguntas:</h2>
+    <!-- Se existir latest_question_list (definido no contexto)-->
+    {% if latest_question_list %} 
+    <ul>
+        <!-- Um for que roda por toda a lista de perguntas -->
+        {% for question in latest_question_list %} 
+        <!-- O link é para a views de detalhe somada com o id da pergunta em questão -->
+        <!-- Exemplo: poll/detail/4 -> vai exibir detalhes da pergunta quatro -->
+            <li><a href="{% url 'polls:detail' question.id %}" class="link-primary">{{ question.question_text }}</a></li>        
+        {% endfor %}
+        </ul>
+    <!-- Se não exister latest_question_list, não tem no que votar -->
+    {% else %}
+    <p>No polls are available.</p>
+    {% endif %}
+</body>
+
+</html>
