@@ -7,6 +7,6 @@ class BasicForm(forms.Form):
         validators.MinLengthValidator(2, "Please enter 2 or more characters")])
     email = forms.EmailField()
     cpf = forms.IntegerField(validators=
-        [validators.MaxLengthValidator(11, "Não deve ultrapassar 11 caracteres"),
-         validators.MinLengthValidator(11, "Deve ter, no mínimo, 11 caracteres")])
-    senha = forms.CharField()
+        [validators.MaxLengthValidator(14, "Não deve ultrapassar 14 caracteres"),
+         validators.MinLengthValidator(14, "Deve ter, no mínimo, 14 caracteres")])
+    senha = forms.CharField(widget = forms.PasswordInput())

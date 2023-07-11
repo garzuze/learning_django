@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{% load static %}
+{% load widget_tweaks %}
+{% load widget_tweaks %}
+{% load widget_tweaks %} 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,28 +16,34 @@
             color: aliceblue;
         }
 
-        #principal {
+        .container-md {
             margin: 20px auto;
-            width: 720px;
             text-align: center;
-            align-items: center;
-            justify-items: center;
         }
     </style>
 </head>
 
 <body>
-    <div id="principal">
-        {% load static %}
-        <img src="{% static 'forms/sepais.png' %}" height="120px">
-        <!-- src=" {% static 'polls/acerto.jpg' %}" -->
-        <form method="post">
-            {% csrf_token %}
-            <table style="margin: 0 auto;">
-                {{form.as_table}}
-            </table>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
+    <div class="container-md">
+        <div class="row">
+            <div class="col-12">
+                <img src="{% static 'forms/sepais.png' %}" height="120px">
+            </div>
+        </div>
+        <div class="row justify-content-evenly">
+            <div class="col-md-auto d-flex justify-content-center">
+                <form class="form-signin" method="post">
+                    {% csrf_token %}
+                    <!-- <table style="margin: 0 auto;">
+                        {{form.as_table}}
+                    </table> -->
+                    <div class="form-group">
+                        {% render_field form.nome class="form-control" placeholder="Nome" type="text" %}
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
     </div>
 
 </body>
