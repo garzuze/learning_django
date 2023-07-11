@@ -3,7 +3,7 @@ from django.shortcuts import redirect, render
 from django.views import View
 
 def check_guess(guess):
-        if guess.lower() != 'fabio dos santos reszko junior':
+        if guess.lower() != 'pipo':
             message = "é nada tu é muito burro"
         else:
             message = "acerto, tu é muito foda"
