@@ -55,3 +55,6 @@ def vote(request, question_id):
         # isso previne que o usuário envie dados duas vezes se apertar o botão de refresh
         # ele vai voltar para a página que o usuário estava anteriormente (args=(question.id))
         return HttpResponseRedirect(reverse("polls:results", args=(question.id,)))
+    
+def owner(request):
+       return HttpResponse("Hello, world. 3d5caa90 is the polls index.")
