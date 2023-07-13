@@ -29,8 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://cabe-2804-14c-87c1-d19a-90d0-ee9f-25e1-c41d.ngrok-free.app',
-    'https://383a-2804-14c-87c1-d19a-94fe-9b8f-e28f-45d8.ngrok-free.app'
+    'https://da50-2804-14c-87c1-d19a-417d-9f82-e21d-8f5d.ngrok-free.app/'
 ]
 
 # Application definition
