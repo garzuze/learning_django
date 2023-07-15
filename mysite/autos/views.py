@@ -83,18 +83,17 @@ class MakeDelete(LoginRequiredMixin, View):
     template = 'autos/make_confirm_delete.html'
 
     def get(self, request, pk):
-        """Carregar o formulário que será alterado"""
+        """Exibe uma página confirmando se o usuário quer mesmo deletar"""
         make = get_object_or_404(self.model, pk=pk) # Pega o modelo que se quer alterar a partir da pk
-        form = MakeForm(instance=make) # Recarrega o formumlário para aquela instancia da classe modelo
         context = {'make': make}
 
         return render(request, self.template, context)
     
     def post(self, request, pk):
-        """Deletar o formulário em si"""
+        """Deletar a make em si"""
         make = get_object_or_404(self.model, pk=pk)
         make.delete()
-        return redirect(self.success_url)
+        return redirect(self.success_url) # SEMPRE redirecionar o usuário depois do POST
     
 # Faça o caminho mais fácil na tabela principal
 # Essas exibições não precisam de um formulário porque tem CreateView, etc.
