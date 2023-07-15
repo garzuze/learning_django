@@ -1,12 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de automóveis!</title>
-</head>
-<body>
+<title>Automobilísticos</title>
+
+{% extends "base_bootstrap.html" %}
+
+{% block content %}
     <h1>Automobilísticos!!!</h1>
-    {{auto_list}}
-</body>
-</html>
+    {% if auto_list %}
+        <ul>
+            {% for auto in auto_list%}
+            <li>
+                <p>
+                    <b>{{auto}}</b> ({{auto.make}})
+                    (<a href="{% url 'autos:auto_update' auto.id %}">Alterar</a> |
+                    <a href="{% url 'autos:auto_delete' auto.id %}">Deletar</a>)
+                </p>
+            </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Não tem nenhum automobilistico mermaum.</p>
+    {% endif %}
+
+    {% if make_count > 0 %}
+        <p>
+            <a href="{% url 'autos:auto_create' %}">Criar um automobilistico</a>
+        </p>
+    {% else %}
+        <P>Por favor, adicione uma montado para criar um automobilistico</P>
+    {% endif %}
+
+    <p>
+        <a href="{% url 'autos:make_list' %}">Ver montadoras</a> ({{make_count}}) |
+        <a href="{% url 'autos:make_create' %}">Adicionar uma montadora</a>
+    </p>
+
+{% endblock %}
