@@ -1,11 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de montadoras!!!!</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends "base_bootstrap.html" %}
+
+{% block content %}
+  <h1>Lista de montadoras</h1>
+  {% if make_list %}
+  <ul>
+    {% for make in make_list %}
+      <li>
+          {{ make.name }}
+         (<a href="{% url 'autos:make_update' make.id %}">Alterar</a> |
+          <a href="{% url 'autos:make_delete' make.id %}">Deletar</a>)
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>Não há nenhuma montadora disponível.</p>
+  {% endif %}
+  <p><a href="{% url 'autos:make_create' %}">Adicionar montadora</a></p>
+  <p>
+    <a href="{% url 'autos:all' %}">Voltar para automoveis</a>
+  </p>
+{% endblock %}
