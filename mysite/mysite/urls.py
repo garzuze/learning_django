@@ -9,6 +9,7 @@ urlpatterns = [
     path('forms/', include('forms.urls')),
     path('guess/', include('guess.urls')),
     path('hello/', include('hello.urls')),
+    path('autos/', include('autos.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
 ]
