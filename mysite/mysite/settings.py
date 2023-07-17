@@ -29,7 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://da50-2804-14c-87c1-d19a-417d-9f82-e21d-8f5d.ngrok-free.app'
+    'https://6643-2804-14c-87c1-d19a-1a2-ecf-ec0c-1fef.ngrok-free.app'
 ]
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'polls.apps.PollsConfig',
     'autos.apps.AutosConfig',
+    'cats.apps.CatsConfig',
     'widget_tweaks',
 ]
 

@@ -10,6 +10,7 @@ urlpatterns = [
     path('guess/', include('guess.urls')),
     path('hello/', include('hello.urls')),
     path('autos/', include('autos.urls')),
+    path('cats/', include('cats.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
 ]
