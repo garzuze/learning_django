@@ -5,7 +5,7 @@ from django.db import models
 class Breed(models.Model):
     name = models.CharField(max_length=120)
 
-    def __init__(self):
+    def __str__(self):
         return self.name
 
 
@@ -15,5 +15,5 @@ class Cat(models.Model):
     foods = models.CharField(max_length=120)
     breed = models.ForeignKey('Breed', on_delete=models.CASCADE, null=False)
 
-    def __init__(self):
+    def __str__(self):
         return self.nickname
