@@ -1,0 +1,16 @@
+<title>Quer mesmo deletar?</title>
+{% extends "base_bootstrap.html" %}
+
+{% block content %}
+
+<h1>Deletar carro</h1>
+
+<p>Quer mesmo deletar o carro {{ auto.nickname }}?</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Sim, deleta ai.">
+  <input type="submit" onclick="window.location='{% url 'autos:all' %}' ; return false;" value="Cancelar">
+</form>
+
+{% endblock %}
