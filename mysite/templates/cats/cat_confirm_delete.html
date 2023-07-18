@@ -1,0 +1,21 @@
+{% extends "cats_base.html" %}
+{% load widget_tweaks %}
+
+{% block head %}
+    <title>Quer mesmo deletar?</title>
+{% endblock %}
+
+{% block title%}
+    <h1>Vai deletar?</h1>
+{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Quer mesmo deletar o gato {{cat.nickname}}?</p>
+        <br>
+        <button class="btn btn-primary">Yes, delete.</button>
+        <button action="action" class="btn btn-primary"
+        onclick="window.history.go(-1); return false;"> Cancel </button>
+    </form>
+{% endblock %}
